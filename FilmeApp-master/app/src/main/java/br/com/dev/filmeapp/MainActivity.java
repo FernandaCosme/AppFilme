@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ListaFilmesActivity.class);
-
                 intent.putExtra(CHAVE, genero);
                 startActivity(intent);
             }

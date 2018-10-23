@@ -22,26 +22,25 @@ public class ListaFilmesActivity extends AppCompatActivity {
 
         atividade = this;
         filme = new Filme();
+
         Intent intent = getIntent();
         String genero = intent.getStringExtra(MainActivity.CHAVE);
-
         ListView listView = (ListView) findViewById(R.id.lista_filmes);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, filme.getListaNomes(genero));
+
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, filme.getListaNomes(genero));
+        FilmeArrayAdapter adapter = new FilmeArrayAdapter(this, filme.getFilmesPorGenero(genero));
+
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // manda para a tela de detalhe
                 Intent intent = new Intent(atividade, DetalheFilmeActivity.class);
-                intent.putExtra(FILME, parent.getItemIdAtPosition(position));
+                intent.putExtra(FILME, filme.getList().get(position).getTitulo());
                 startActivity(intent);
             }
-
         });
     }
 }

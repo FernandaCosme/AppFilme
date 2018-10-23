@@ -15,18 +15,23 @@ public class Genero {
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public ArrayList<Genero> getList() {
         return list;
     }
+
     public void setList(ArrayList<Genero> list) {
         this.list = list;
     }
