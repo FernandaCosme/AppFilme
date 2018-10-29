@@ -7,11 +7,11 @@ public class Filme {
     private int id;
     private String titulo;
     private String descricao;
-    private String anoLancamento;
+    private String dataLancamento;
     private String direcao;
     private int popularidade;
     private Genero genero;
-    private String iconName;
+    private String postartPath;
 
     private ArrayList<Filme> list = new ArrayList<>();
 
@@ -20,11 +20,11 @@ public class Filme {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
-        this.anoLancamento = anoLancamento;
+        this.dataLancamento = anoLancamento;
         this.direcao = direcao;
         this.popularidade = popularidade;
         this.genero = genero;
-        this.iconName = iconName;
+        this.postartPath = iconName;
     }
 
     public int getId() {
@@ -51,12 +51,12 @@ public class Filme {
         this.descricao = descricao;
     }
 
-    public String getAnoLancamento() {
-        return anoLancamento;
+    public String getDataLancamento() {
+        return dataLancamento;
     }
 
-    public void setAnoLancamento(String anoLancamento) {
-        this.anoLancamento = anoLancamento;
+    public void setDataLancamento(String dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public String getDirecao() {
@@ -83,12 +83,10 @@ public class Filme {
         this.genero = genero;
     }
 
-    public String getIconName() {
-        return iconName;
-    }
+    public String getPostartPath() { return postartPath; }
 
-    public void setIconName(String iconName) {
-        this.iconName= iconName;
+    public void setPostartPath(String postartPath) {
+        this.postartPath = postartPath;
     }
 
     public ArrayList<Filme> getList() {

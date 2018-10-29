@@ -30,7 +30,7 @@ public class DetalheFilmeActivity extends AppCompatActivity {
         id.setText(String.valueOf(filme.getId()));
         titulo.setText(filme.getTitulo());
         descricao.setText(filme.getDescricao());
-        anoLancamento.setText(filme.getAnoLancamento());
+        anoLancamento.setText(filme.getDataLancamento());
         popularidade.setText(String.valueOf(filme.getPopularidade()));
         direcao.setText(filme.getDirecao());
         genero.setText(filme.getGenero().getNome());
